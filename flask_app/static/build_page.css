@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url("/static/pics/build_page_close_up.jpeg");
+    background-attachment: fixed;
+}
+
+.row{
+    margin-bottom: 20px;
+}
+.top_nav{
+    background-color: black;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+h1{
+    color: black;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 2px 2px greenyellow;
+}
+
+.button_1{
+    height: 40px;
+    width: 110px;
+    background-color: greenyellow;
+    font-family: 'Fascinate', cursive;
+
+}
+
+.button_1:hover{
+    background-color: black;
+    color: greenyellow;
+}
+
+img{
+    width: 80px;
+}
+
+h6{
+    font-weight: bold;
+}
+
+.list-group-item{
+    color: red;
+    text-align: center;
+}
+
+.add_pedal_btn{
+    color: blue;
+    background-color: white;
+    border: none;
+}
+
+.price{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

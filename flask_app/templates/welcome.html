@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Fascinate&display=swap" rel="stylesheet">  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'welcome.css')}}">
+    <title>Welcome</title>
+</head>
+<body>
+    <div id="fillwidth">
+        <h1>Welcome {{user.first_name}}!</h1>
+    </div>
+    <div id="fillwidth">
+        <div class="card opacity-75 mx-auto" style="width: 30rem;">
+            <div class="card-body">
+                <h3>Here at Dream Board Customs we are crazy about pedals, and we know you are too. We want you to spend more
+                    time rocking and less time fiddling with cables. That's why we build your dream board for you. The pedals you select will
+                    come mounted on a board, wired up and ready to play. Open the box, plug in and ROCK!
+                </h3>
+            </div>
+        </div>
+    </div>
+    <div id="fillwidth">
+        <div class="welcome_btn_container mx-auto">
+            <form action="/build">
+                <input class="button_1 opacity-75" type="submit" value="Build It!"> 
+            </form>
+            <form action="/logout">
+                <input class="button_1 opacity-75" type="submit" value="Logout">
+            </form> 
+        </div>
+    </div>
+</body>
+</html>

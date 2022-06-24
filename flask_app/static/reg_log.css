@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url("/static/pics/pedals1.jpeg");
+    font-family: 'Fascinate', cursive;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+h1{
+    color: black;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 2px 2px greenyellow;
+}
+
+#outline_text{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: greenyellow;
+}
+
+.register, .login{
+    height: 400px;
+    width: 400px;
+}
+
+.button_1{
+    height: 35px;
+    width: 110px;
+    background-color: greenyellow;
+}
+
+.button_1:hover{
+    background-color: black;
+    color: greenyellow;
+}
+
+.welcome_btn_container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    
+}
