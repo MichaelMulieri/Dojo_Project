@@ -9,8 +9,14 @@ body{
 }
 
 .row{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
 .top_nav{
     background-color: black;
     height: 80px;
