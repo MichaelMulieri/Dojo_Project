@@ -24,178 +24,62 @@
         </form>
     </div>
     <div class="container">
+        {% for pedal in all_pedals %}
+            {% if pedal.id <= 4 %}
         <div class="row">
             <div class="col">
                 <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[0].pedal_pic}}" class="card-img-top" alt="Poly Tune">
+                    <img src="{{pedal.pedal_pic}}" class="card-img-top" alt="Poly Tune">
                     <div class="card-body">
                         <form action="/save/pedal" method="post">
-                            <h6 class="card-title">{{all_pedals[0].pedal_name}}</h6>
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[0].id}}">
-                            <p class="card-text">{{all_pedals[0].pedal_desc}}</p>
+                            <h6 class="card-title">{{pedal.pedal_name}}</h6>
+                            <input type="hidden" name="pedal_id" value="{{pedal.id}}">
+                            <p class="card-text">{{pedal.pedal_desc}}</p>
                     </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">${{all_pedals[0].pedal_price}}0</li>
+                            <li class="list-group-item">${{pedal.pedal_price}}0</li>
                         </ul>
                         <div class="card-body">
-                            <input class="add_pedal_btn" id="1" onclick="message(this.id)" type="submit" value="Add Pedal">
+                            <input class="add_pedal_btn" id="{{pedal.id}}" onclick="message(this.id)" type="submit" value="Add Pedal">
                         </form>
-                        <form action="/demo/vid/{{all_pedals[0].id}}">
+                        <form action="/demo/vid/{{pedal.id}}">
                             <input class="add_pedal_btn" type="submit" value="Demo Vid">
                         </form>
                         </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[1].pedal_pic}}" class="card-img-top" alt="Tumnus">
-                    <div class="card-body">
-                        <form action="/save/pedal" method="post">
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[1].id}}">
-                        <h6 class="card-title">{{all_pedals[1].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[1].pedal_desc}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[1].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="2" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[1].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[2].pedal_pic}}" class="card-img-top" alt="Rat">
-                    <div class="card-body">
-                        <form action="/save/pedal" method="post">
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[2].id}}">
-                        <h6 class="card-title">{{all_pedals[2].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[2].pedal_desc}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[2].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="3" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[2].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[3].pedal_pic}}" class="card-img-top" alt="Corona Chorus">
-                    <div class="card-body">
-                        <form action="/save/pedal" method="post">
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[3].id}}">
-                        <h6 class="card-title">{{all_pedals[3].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[3].pedal_desc}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[3].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="4" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[3].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
-                </div>
-            </div>
         </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="container">
+        {% for pedal in all_pedals %}
+            {% if pedal.id >= 5 %}
         <div class="row">
             <div class="col">
                 <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[4].pedal_pic}}" class="card-img-top" alt="Poly Tune">
+                    <img src="{{pedal.pedal_pic}}" class="card-img-top" alt="Poly Tune">
                     <div class="card-body">
                         <form action="/save/pedal" method="post">
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[4].id}}">
-                        <h6 class="card-title">{{all_pedals[4].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[4].pedal_desc}}</p>
+                            <h6 class="card-title">{{pedal.pedal_name}}</h6>
+                            <input type="hidden" name="pedal_id" value="{{pedal.id}}">
+                            <p class="card-text">{{pedal.pedal_desc}}</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[4].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="5" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[4].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[5].pedal_pic}}" class="card-img-top" alt="Poly Tune">
-                    <div class="card-body">
-                        <form action="/save/pedal" method="post">
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[5].id}}">
-                        <h6 class="card-title">{{all_pedals[5].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[5].pedal_desc}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[5].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="6" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[5].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[6].pedal_pic}}" class="card-img-top" alt="Poly Tune">
-                    <div class="card-body">
-                        <form action="/save/pedal" method="post">
-                            <input type="hidden" name="pedal_id" value="{{all_pedals[6].id}}">
-                        <h6 class="card-title">{{all_pedals[6].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[6].pedal_desc}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[6].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="7" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[6].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" style="width: 16rem;">
-                    <img src="{{all_pedals[7].pedal_pic}}" class="card-img-top" alt="Poly Tune">
-                    <div class="card-body">
-                    <form action="/save/pedal" method="post">
-                        <input type="hidden" name="pedal_id" value="{{all_pedals[7].id}}">
-                        <h6 class="card-title">{{all_pedals[7].pedal_name}}</h6>
-                        <p class="card-text">{{all_pedals[7].pedal_desc}}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">${{all_pedals[7].pedal_price}}0</li>
-                    </ul>
-                    <div class="card-body">
-                        <input class="add_pedal_btn" id="8" onclick="message(this.id)" type="submit" value="Add Pedal">
-                    </form>
-                    <form action="/demo/vid/{{all_pedals[7].id}}">
-                        <input class="add_pedal_btn" type="submit" value="Demo Vid">
-                    </form>
-                    </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">${{pedal.pedal_price}}0</li>
+                        </ul>
+                        <div class="card-body">
+                            <input class="add_pedal_btn" id="{{pedal.id}}" onclick="message(this.id)" type="submit" value="Add Pedal">
+                        </form>
+                        <form action="/demo/vid/{{pedal.id}}">
+                            <input class="add_pedal_btn" type="submit" value="Demo Vid">
+                        </form>
+                        </div>
                 </div>
             </div>
         </div>
+        {% endif %}
+        {% endfor %}
     </div>
     <script type="text/javascript" 
     src = "{{ url_for('static', filename = 'script.js') }}"></script>
