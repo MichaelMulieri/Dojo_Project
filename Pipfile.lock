@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0cce959f3a21bbd482a230fee88c2b8e27041c1830052851699408ed4ea2ef0a"
+            "sha256": "9b9e0e6a85c8cc803632c1ed003db0fa23de3edffcd090e745b85569e3c28547"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -111,6 +111,13 @@
             ],
             "index": "pypi",
             "version": "==1.0.1"
+        },
+        "flask-dotenv": {
+            "hashes": [
+                "sha256:8ef7d21877fdebdb46276da07ccb9a55b45fa657e476b0c7b7f5f1fa071057f6"
+            ],
+            "index": "pypi",
+            "version": "==0.1.2"
         },
         "itsdangerous": {
             "hashes": [
